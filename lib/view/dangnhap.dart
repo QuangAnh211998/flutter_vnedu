@@ -79,7 +79,6 @@ class _dangnhapPageState extends State<dangnhapPage> {
                 Text('hoặc sử dụng tài khoản được cấp'),
                 SizedBox(height: size.height*0.04),
                 TextField(
-                  //ánh
                   decoration: InputDecoration(
                       hintText: "example@gmail.com",
                       prefixIcon: Icon(Icons.person_outline)),
