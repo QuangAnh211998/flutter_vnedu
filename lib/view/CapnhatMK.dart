@@ -32,7 +32,7 @@ class _capnhatmkPageState extends State<capnhatmkPage> {
       ),
       body: Container(
         width: size.width * 0.8,
-        margin: EdgeInsets.fromLTRB(size.width*0.1, 30, size.width*0.1, 0),
+        margin: EdgeInsets.fromLTRB(size.width*0.1, size.height*0.04, size.width*0.1, 0),
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
@@ -47,12 +47,12 @@ class _capnhatmkPageState extends State<capnhatmkPage> {
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              SizedBox(height: size.height*0.015),
               Text(
                 'Mật khẩu mới của bạn cần khác so với mật khẩu cũ.',
                 style: TextStyle(fontSize: 16.0, color: Colors.black87),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: size.height*0.06),
               Container(
 //              margin: EdgeInsets.fromLTRB(40, 0, 40, 0),
                 child: Column(
@@ -72,7 +72,7 @@ class _capnhatmkPageState extends State<capnhatmkPage> {
                       ),
                       obscureText: _secureText,
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: size.height*0.015),
                     TextField(
                       decoration: InputDecoration(
                         hintText: "Nhập lại mật khẩu",
@@ -88,7 +88,7 @@ class _capnhatmkPageState extends State<capnhatmkPage> {
                       ),
                       obscureText: _secureText,
                     ),
-                    SizedBox(height: 15),
+                    SizedBox(height: size.height*0.02),
                     Row(
                       children: <Widget>[
                         Text(
@@ -97,7 +97,7 @@ class _capnhatmkPageState extends State<capnhatmkPage> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 40),
+                    SizedBox(height: size.height*0.05),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -166,7 +166,7 @@ class _KetquaState extends State<Ketqua> {
       ),
       body: Container(
         width: size.width * 0.8,
-        margin: EdgeInsets.fromLTRB(size.width*0.1, 30, size.width*0.1, 0),
+        margin: EdgeInsets.fromLTRB(size.width*0.1, size.height*0.04, size.width*0.1, 0),
         child: Column(
           children: <Widget>[
             Container(
@@ -179,7 +179,7 @@ class _KetquaState extends State<Ketqua> {
               child: Icon(Icons.https_outlined,
                   size: 60, color: Color(0xffBB2634)),
             ),
-            SizedBox(height: 15),
+            SizedBox(height: size.height*0.025),
             Container(
               child: Text(
                 'Cập nhật mật khẩu thành công',
@@ -190,7 +190,7 @@ class _KetquaState extends State<Ketqua> {
                 textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(height: 60),
+            SizedBox(height: size.height*0.08),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[

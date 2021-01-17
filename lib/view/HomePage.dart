@@ -102,20 +102,21 @@ class _HomePageState extends State<HomePage> {
 
               // Đang học
               Container(
-                height: 230,
+                height: size.height*0.35,
                 child: Column(
                   children: <Widget>[
                     Container(
                       alignment: Alignment.topLeft,
-                      margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                      margin: EdgeInsets.fromLTRB(size.width*0.05, size.height*0.02, 0, 0),
                       child: Text(
                         'Đang học',
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                     ),
+                    SizedBox(height: size.height*0.01),
                     Container(
-                      height: 170,
+                      height: size.height*0.25,
                       child: new ListView(
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: true,
@@ -135,13 +136,13 @@ class _HomePageState extends State<HomePage> {
 
               // Khóa học của tôi
               Container(
-                margin: EdgeInsets.fromLTRB(0, 0, 10, 10),
-                height: 320,
+                margin: EdgeInsets.fromLTRB(0, 0, size.width*0.02, size.width*0.02),
+                height: size.height*0.45,
                 child: Column(
                   children: <Widget>[
                     Container(
                         alignment: Alignment.topLeft,
-                        margin: EdgeInsets.fromLTRB(20, 0, 0, 20),
+                        margin: EdgeInsets.fromLTRB(size.width*0.05, 0, 0, size.width*0.04),
                         child: Row(
                           children: <Widget>[
                             Text(
@@ -162,7 +163,7 @@ class _HomePageState extends State<HomePage> {
                         )),
                     Container(
                       margin: EdgeInsets.fromLTRB(size.width * 0.05, 0, 0, 0),
-                      height: 270,
+                      height: size.height*0.38,
                       child: new ListView(
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: true,
@@ -342,7 +343,7 @@ class _HomePageState extends State<HomePage> {
       alignment: AlignmentDirectional.center,
       width: size.width * 0.9,
       margin: EdgeInsets.fromLTRB(size.width * 0.05, 10, 0, 0),
-      height: 150,
+      height: size.height*0.2,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
@@ -352,7 +353,7 @@ class _HomePageState extends State<HomePage> {
         child: Row(
           children: <Widget>[
             Container(
-                height: 120,
+                height: size.height*0.18,
                 width: size.width * 0.37,
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -419,7 +420,7 @@ class _HomePageState extends State<HomePage> {
     return Container(
       alignment: AlignmentDirectional.center,
       width: size.width * 0.75,
-      height: 140,
+      height: size.height*0.19,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
@@ -429,7 +430,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: <Widget>[
             Container(
-              height: 120,
+              height: size.height*0.16,
               decoration: BoxDecoration(
                 image: DecorationImage(
                     fit: BoxFit.cover, image: AssetImage('assets/image2.png')),

@@ -29,7 +29,7 @@ class _State extends State<khoiphucmkPage> {
       ),
       body: Container(
         width: size.width * 0.8,
-        margin: EdgeInsets.fromLTRB(size.width*0.1, 20, size.width*0.1, 0),
+        margin: EdgeInsets.fromLTRB(size.width*0.1, size.height*0.03, size.width*0.1, 0),
         child: Column(
           children: <Widget> [
             Row(
@@ -42,21 +42,21 @@ class _State extends State<khoiphucmkPage> {
           ],
         ),
 
-            SizedBox(height: 10),
+            SizedBox(height: size.height*0.015),
             Text('Vui lòng nhập email của bạn để tiến hành khôi phục tài khoản:',
               style: TextStyle(
                 height: 1.5,
                 fontSize: 16.0,
                 color: Colors.black87
             ),),
-            SizedBox(height: 30),
+            SizedBox(height: size.height*0.05),
             TextField(
               decoration: InputDecoration(
                   hintText: "example@gmail.com",
                   prefixIcon: Icon(Icons.person_outline)
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: size.height*0.05),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget> [
@@ -116,7 +116,7 @@ class _homthuPageState extends State<homthuPage> {
         ),
         body: Container(
           width: size.width * 0.9,
-          margin: EdgeInsets.fromLTRB(size.width*0.05, 30, size.width*0.05, 0),
+          margin: EdgeInsets.fromLTRB(size.width*0.05, size.height*0.05, size.width*0.05, 0),
           child:  Column(
             children: <Widget>[
               Container(
@@ -129,11 +129,10 @@ class _homthuPageState extends State<homthuPage> {
                 child: Icon(Icons.email_outlined,
                     size: 60, color: Color(0xffBB2634)),
               ),
-              SizedBox(height: 15),
+              SizedBox(height: size.height*0.03),
               Container(
                 alignment: AlignmentDirectional.center,
                 width: size.width*0.65,
-                height: 80,
                 child: Text(
                   'Kiểm tra hòm thư của bạn',
                   style: TextStyle(
@@ -152,7 +151,7 @@ class _homthuPageState extends State<homthuPage> {
                     style: TextStyle(fontSize: 16.0, color: Colors.black87),
                     textAlign: TextAlign.center),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: size.height*0.04),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -174,7 +173,7 @@ class _homthuPageState extends State<homthuPage> {
                   )
                 ],
               ),
-              SizedBox(height: 15),
+              SizedBox(height: size.height*0.015),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -191,7 +190,6 @@ class _homthuPageState extends State<homthuPage> {
                   child: Container(
                     alignment: AlignmentDirectional.center,
                     width: size.width*0.9,
-                    height: 50,
                     margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
