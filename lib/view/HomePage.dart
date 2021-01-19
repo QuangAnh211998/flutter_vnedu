@@ -336,7 +336,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  // Đang học nha
+  // Đang học
   Container Danghoc(String cauhoi, String mon) {
     Size size = MediaQuery.of(context).size;
     return Container(
