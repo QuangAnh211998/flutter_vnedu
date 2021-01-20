@@ -94,7 +94,27 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
                 color: Colors.grey[100],
               ),
-              Danhsachcuatoi(size),
+              Container(
+                margin: EdgeInsets.fromLTRB(0, 10, 0, 15),
+                width: size.width * 0.9,
+                height: 230,
+                child: GridView.count(
+                  primary: false,
+                  crossAxisCount: 3,
+                  children: <Widget>[
+                    Danhsachcuatoi(Icons.date_range, "Lịch học tập", 0xffBB2634,
+                        0xffFFE4E0),
+                    Danhsachcuatoi(Icons.cast_for_education, "Khóa học của tôi",
+                        0xffC32C6D, 0xfff3e5f5),
+                    Danhsachcuatoi(Icons.lightbulb_outline, "cuộc thi của tôi",
+                        0xff833B78, 0xfff3e5f5),
+                    Danhsachcuatoi(Icons.subtitles_outlined, "tin tức",
+                        0xff57477D, 0xffd7ccc8),
+                    Danhsachcuatoi(Icons.stars_outlined, "Sự kiện", 0xff2F4858,
+                        0xffcfd8dc),
+                  ],
+                ),
+              ),
               Container(
                 height: 10,
                 color: Colors.grey[100],
@@ -102,21 +122,22 @@ class _HomePageState extends State<HomePage> {
 
               // Đang học
               Container(
-                height: size.height*0.35,
+                height: size.height * 0.35,
                 child: Column(
                   children: <Widget>[
                     Container(
                       alignment: Alignment.topLeft,
-                      margin: EdgeInsets.fromLTRB(size.width*0.05, size.height*0.02, 0, 0),
+                      margin: EdgeInsets.fromLTRB(
+                          size.width * 0.05, size.height * 0.02, 0, 0),
                       child: Text(
                         'Đang học',
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                     ),
-                    SizedBox(height: size.height*0.01),
+                    SizedBox(height: size.height * 0.01),
                     Container(
-                      height: size.height*0.25,
+                      height: size.height * 0.25,
                       child: new ListView(
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: true,
@@ -136,13 +157,15 @@ class _HomePageState extends State<HomePage> {
 
               // Khóa học của tôi
               Container(
-                margin: EdgeInsets.fromLTRB(0, 0, size.width*0.02, size.width*0.02),
-                height: size.height*0.45,
+                margin: EdgeInsets.fromLTRB(
+                    0, 0, size.width * 0.02, size.width * 0.02),
+                height: size.height * 0.45,
                 child: Column(
                   children: <Widget>[
                     Container(
                         alignment: Alignment.topLeft,
-                        margin: EdgeInsets.fromLTRB(size.width*0.05, 0, 0, size.width*0.04),
+                        margin: EdgeInsets.fromLTRB(
+                            size.width * 0.05, 0, 0, size.width * 0.04),
                         child: Row(
                           children: <Widget>[
                             Text(
@@ -163,7 +186,7 @@ class _HomePageState extends State<HomePage> {
                         )),
                     Container(
                       margin: EdgeInsets.fromLTRB(size.width * 0.05, 0, 0, 0),
-                      height: size.height*0.38,
+                      height: size.height * 0.38,
                       child: new ListView(
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: true,
@@ -221,116 +244,25 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Container Danhsachcuatoi(Size size) {
+  Container Danhsachcuatoi(
+      IconData icon, String name, int iccolor, int bgcolor) {
     return Container(
-      margin: EdgeInsets.fromLTRB(0, 10, 0, 15),
-      width: size.width * 0.9,
-      height: 230,
-      child: GridView.count(
-        primary: false,
-        crossAxisCount: 3,
+      child: Column(
         children: <Widget>[
-          Column(
-            children: <Widget>[
-              InkWell(
-                onTap: openLichhoc,
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Color(0xffFFE4E0)),
-                  child: Icon(Icons.date_range,
-                      size: 30, color: Color(0xffBB2634)),
-                ),
-              ),
-              SizedBox(height: 10),
-              Text('Lịch học tập',
-                  style: TextStyle(fontSize: 15, color: Color(0xff000000))),
-            ],
+          InkWell(
+            onTap: openLichhoc,
+            child: Container(
+              alignment: Alignment.center,
+              width: 50,
+              height: 50,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Color(bgcolor)),
+              child: Icon(icon, size: 30, color: Color(iccolor)),
+            ),
           ),
-          Column(
-            children: <Widget>[
-              InkWell(
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Color(0xfff3e5f5)),
-                  child: Icon(Icons.cast_for_education,
-                      size: 30, color: Color(0xffC32C6D)),
-                ),
-              ),
-              SizedBox(height: 10),
-              Text('Khóa học của tôi',
-                  style: TextStyle(fontSize: 15, color: Color(0xff000000))),
-            ],
-          ),
-          Column(
-            children: <Widget>[
-              InkWell(
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Color(0xfff3e5f5)),
-                  child: Icon(
-                    Icons.lightbulb_outline,
-                    size: 30,
-                    color: Color(0xff833B78),
-                  ),
-                ),
-              ),
-              SizedBox(height: 10),
-              Text(
-                'Cuộc thi của tôi',
-                style: TextStyle(fontSize: 15, color: Color(0xff000000)),
-              ),
-            ],
-          ),
-          Column(
-            children: <Widget>[
-              InkWell(
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Color(0xffd7ccc8)),
-                  child: Icon(Icons.subtitles_outlined,
-                      size: 30, color: Color(0xff57477D)),
-                ),
-              ),
-              SizedBox(height: 10),
-              Text('Tin tức',
-                  style: TextStyle(fontSize: 15, color: Color(0xff000000))),
-            ],
-          ),
-          Column(
-            children: <Widget>[
-              InkWell(
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Color(0xffcfd8dc)),
-                  child: Icon(Icons.stars_outlined,
-                      size: 30, color: Color(0xff2F4858)),
-                ),
-              ),
-              SizedBox(height: 10),
-              Text('Sự kiện',
-                  style: TextStyle(fontSize: 15, color: Color(0xff000000))),
-            ],
-          ),
+          SizedBox(height: 10),
+          Text(name, style: TextStyle(fontSize: 15, color: Color(0xff000000))),
         ],
       ),
     );
@@ -343,7 +275,7 @@ class _HomePageState extends State<HomePage> {
       alignment: AlignmentDirectional.center,
       width: size.width * 0.9,
       margin: EdgeInsets.fromLTRB(size.width * 0.05, 10, 0, 0),
-      height: size.height*0.2,
+      height: size.height * 0.2,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
@@ -353,7 +285,7 @@ class _HomePageState extends State<HomePage> {
         child: Row(
           children: <Widget>[
             Container(
-                height: size.height*0.18,
+                height: size.height * 0.18,
                 width: size.width * 0.37,
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -420,7 +352,7 @@ class _HomePageState extends State<HomePage> {
     return Container(
       alignment: AlignmentDirectional.center,
       width: size.width * 0.75,
-      height: size.height*0.19,
+      height: size.height * 0.19,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
@@ -430,7 +362,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: <Widget>[
             Container(
-              height: size.height*0.16,
+              height: size.height * 0.16,
               decoration: BoxDecoration(
                 image: DecorationImage(
                     fit: BoxFit.cover, image: AssetImage('assets/image2.png')),
