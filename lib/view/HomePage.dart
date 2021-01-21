@@ -138,6 +138,7 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(height: size.height * 0.01),
                     Container(
                       height: size.height * 0.25,
+                      margin: EdgeInsets.only(left: size.width * 0.05),
                       child: new ListView(
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: true,
@@ -274,14 +275,14 @@ class _HomePageState extends State<HomePage> {
     return Container(
       alignment: AlignmentDirectional.center,
       width: size.width * 0.9,
-      margin: EdgeInsets.fromLTRB(size.width * 0.05, 10, 0, 0),
+      margin: EdgeInsets.only(top: 10),
       height: size.height * 0.2,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
               style: BorderStyle.solid, color: Colors.grey[100], width: 10)),
       child: Container(
-        margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+//        margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
         child: Row(
           children: <Widget>[
             Container(
